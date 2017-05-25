@@ -1,0 +1,22 @@
+.container{
+	/*width: 100%;*/
+}
+
+/*div{border: 1px solid red;}*/
+
+.top{
+    width: 1000px;
+    height: 28px;
+    font-size: 1.2em;
+    line-height: 28px;
+    margin-bottom: 10px;
+    background: url(../img/mbx01.png);
+}
+.box{
+    width: 490px;
+    height: 181px;
+    border: 1px solid #CCD3DD;
+    background: url(../img/major02.jpg);
+    margin: 0 10px 10px 0;
+}
+
