@@ -102,14 +102,10 @@ header div#divNav a:hover ,header ul.container-fluid div.navbar-header > a:hover
 }
 .content{
 	width: 100%;
-	/*height: 722px;*/
 }
 .content .container{
-	/*width: 1000px;*/
 	height: 100%;
 	margin: auto;
-	/*border:1px solid pink;*/
-
 }
 .ly{
 	border-top:10px solid white;
