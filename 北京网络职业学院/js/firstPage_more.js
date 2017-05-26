@@ -42,10 +42,16 @@ window._bd_share_config={
         if(allComment.children.length>=5){
         	allComment.style.borderBottom="0";
         }
-        if(allComment.children.length%5!=0){
-            var p_div=document.createElement("div") 
-            p_div.id="page";   
-        }
+        for(var i=0;i<allComment.children.length;i++){
+        	// page.innerHTML="";
+	        if(allComment.children.length%5!=0){
+	            var pageLi=document.createElement("li");
+	            page.appendChild(pageLi);
+	            pageLi.innerHTML=i+1; 
+	        }
+	         
+
+	    }
         pageUp.onclick=function(){
         	if(page.innerHTML==""){
         		
