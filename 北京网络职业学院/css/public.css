@@ -74,6 +74,7 @@ header div#divNav a:hover ,header ul.container-fluid div.navbar-header > a:hover
 	color: #fff;
 }
 /*头部结束*/
+<<<<<<< HEAD
 
 /*中间开始*/
 .center_top{
@@ -197,6 +198,8 @@ header div#divNav a:hover ,header ul.container-fluid div.navbar-header > a:hover
 }
 /*中间结束*/
 
+=======
+>>>>>>> origin/master
 /*底部开始*/
 footer {
 	background: url('../img/footer01.jpg') no-repeat;
