@@ -101,4 +101,45 @@ window._bd_share_config={
             }
         };
     })();
+
+            //获取轮播小点点
+    var dian = document.getElementsByClassName('cycle-pager')[0].children;
+    //获取五张图片
+    var tu = document.getElementsByClassName('cycle-slide');
+    //轮播定时器
+    var i = 0;
+    function time_Interval(){
+        for(var j=0;j<dian.length;j++){
+            dian[j].className = "";
+            tu[j].style.opacity = '0';
+            tu[j].style.zIndex = '0';
+        }
+        if(i==4){
+            i = 0;
+        }else{
+            i++;
+        }
+        dian[i].className = "cycle-pager-active";
+        tu[i].style.opacity = "1";
+        tu[i].style.zIndex = '100';
+    }
+    var time = setInterval(time_Interval,4000);
+    //点击小点点换图
+    for(var j=0;j<dian.length;j++){
+        dian[j].index = j;
+        dian[j].onclick = function(){
+            clearInterval(time);
+            for(var j=0;j<dian.length;j++){
+                dian[j].className = "";
+                tu[j].style.opacity = '0';
+                tu[j].style.zIndex = '0';
+            }
+            this.className = "cycle-pager-active";
+            tu[this.index].style.opacity = '1';
+            tu[this.index].style.zIndex = '100';
+            i=this.index;
+            time = setInterval(time_Interval,4000);
+        }
+    }
+    
 }
