@@ -42,6 +42,19 @@ window._bd_share_config={
         if(allComment.children.length>=5){
         	allComment.style.borderBottom="0";
         }
+
+        if(allComment.children.length%5!=0){
+            var p_div=document.createElement("div") 
+            p_div.id="page";   
+        }
+        pageUp.onclick=function(){
+        	if(page.innerHTML==""){
+        		
+        	}
+        }
+
+	}
+
         var num=Math.floor(allComment.children.length/5+1)
         // console.log(Math.floor(allComment.children.length/5+1));
         for(var i=0;i<num;i++){
@@ -106,3 +119,4 @@ window._bd_share_config={
         };
     })();
 }
+
