@@ -36,6 +36,7 @@ window.onload=function(){
                 };
                 lunbotuRightUlLi[z].style.zIndex="99";
                 lunbotuRightUlLi[z].style.opacity="1";
+                lunbotuPointSpan[z].style.backgroundColor="red";
                 var s=z;
                 timerA=setInterval(timerInter,4000);
             }
