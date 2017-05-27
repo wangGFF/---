@@ -164,27 +164,23 @@
     <p style="text-align:right;">责任编辑：刘兰</p>
 
                     </div>
-                    <div class="comment" id="commentThreeChild">
+                    <div class="comment" id="commentThreeChild"style="width:100%">
                         <div class="comment_publish"><p>发表评论</p></div>
-                        <textarea style="width:97.6%;height:96px;resize:none;"></textarea>
-                        <div class="comment_publish_pub">发表</div>
+                        <textarea id="comment" style="width:97.6%;height:96px;resize:none;"></textarea>
+                        <div class="comment_publish_pub" id="publish">发表</div>
                         <div class="all_comment">全部评论</div>
                         
-                        <div style="position:relative;top:65px;">
-                            <div>   记者：少数民族学生是否有加分政策？
-                        邹主任：加分都是按国家政策来的，只要在考生成绩上加分后达到控制分数线，我院均承认。
-
-                        记者：考生在报考的时候应该注意哪些问题？对他们有何建议？
-                        邹主任：如果考生有很强的意向报考我校，最好是填第一志愿。录取可能性更大。另外报考志愿时学校代码别填错，因为艺术生是提前批次，所以需要注意下报考时间。考生填写志愿时，要考虑专业未来的发展前景以及有没有一个好的就业前景。而我院的五大专业，目前来看，前景都比较好，都是互联网邻域里最热门、人才最紧缺的专业。
-
-                        招办主任邹平给考生的解答，希望对你们报考北京网络职业学院有所帮助，想了解更多问题，请拨打010—81303630,010—81305314，或登陆北京网络职业学院官网了解！
-
-                        责任编辑：刘兰</div>
-                            <div style="position:absolute;right:2.3%;">
-                                <a href="" class="comment_leri"><</a>
-                                <a href=""></a>
-                                <a href="" class="comment_leri">></a>
-                                <em style="font-style:normal;">共<b>0</b>页</em>
+                        <div style="position:relative;top:65px;" >   
+                            <div id="commentAndNumber">
+                                <div id="allComment" class="allCommentDiv"></div>
+                            </div>
+                            <div class="all_comment_num" style="position:absolute;right:2.3%;">
+                                <span  class="comment_leri" id="pageUp"><</span>
+                                <span id="page">
+                                    <span class="NumberA">1</span>
+                                </span>
+                                <span class="comment_leri" id="pageDown">></span>
+                                <em style="font-style:normal;">共<b id="pageNumber">1</b>页</em>
                             </div>
                         </div>
                     </div>
@@ -230,7 +226,7 @@
                         <div style="height:228px;"></div>
                     <div class="student_wish_article"><!-- 热门文章 -->
                         <div class="wish_article_top">
-                            <span class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wish_article_left"><p class="hot_article">热门文章</p></span>
+                            <span class="col-lg-4 col-xs-12 wish_article_left"><p class="hot_article">热门文章</p></span>
                         </div> 
                         <ul style="padding-left:14px;">
                             <li >
