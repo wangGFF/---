@@ -52,17 +52,17 @@ window.onload = function (){
  	//获取到发表按钮
  	var publish = document.getElementById('btn_pinglun');	
  	//该函数作用：通过criticism_json动态创建评论
- 	function Trends_create(){
+ 	function Trends_create(begin,index){
  		//数据为空时什么也不做，数据不为空才创建
    		if(criticism_json.length!=0){
    			//数组不为空就遍历数组，创建每一条评论内容
-   			for(var i=criticism_json.length-1;i>=0;i--){
+   			for(var i=begin;(criticism_json.length-begin>=5?i<5:i<criticism_json.length);i++){
    				//创建li用于存放每一条评论
    				var li = document.createElement('li');
    				li.innerText = criticism_json[i];
-   				criticism_ul.insertBefore(li,criticism_ul.firstChild);
-   				//如果是第一条评论；有下边框
-   				if(i==criticism_json.length-1){
+   				criticism_ul.insertBefore(li,null);
+   				//如果是最底下一条评论；有下边框
+   				if(criticism_json.length>=5?i==4:i==criticism_json.length-1){
    					li.className = "bottom";
    				}
    			}
@@ -70,15 +70,66 @@ window.onload = function (){
    			//数组为空什么也不做
    			return false;
    		}
+   		//获取页数显示标签
+	 	var footer = document.getElementById('footer');
+	 	//显示页数
+	 	footer_nuber = Math.ceil(criticism_json.length/5);
+	 	footer.innerText = footer_nuber;
+	 	//动态创建每个页数
+	 	var cada_footer = document.getElementById('cada_footer');
+	 	cada_footer.innerHTML = "";
+	 	for(var j=1;j<=footer_nuber;j++){
+	 		var span = document.createElement('span');
+	 		span.innerText = j;
+	 		if(j-1==index){
+	 			span.className = 'bg';
+	 		}
+	 		cada_footer.insertBefore(span,null);
+	 	}
+	 	if(begin==0){
+	 	//获取所有的页数
+	 	var span = cada_footer.children;
+		 	for(var y=0;y<span.length;y++){
+		 		if(span[y].innerText==1){
+		 			span[y].className = 'bg';
+		 		}
+		 	}
+	 	}
+	 	//获取每个页数,点击变颜色
+	 	var page = cada_footer.children;
+	 	for(var k=0;k<page.length;k++){
+		 	page[k].onclick = function(){
+		 		for(var k=0;k<page.length;k++){
+		 		page[k].index = k;
+		 		page[k].className = '';	
+		 	}
+ 			criticism_ul.innerHTML = '';	
+ 			Trends_create(this.index*5,this.index);
+	 		}
+	 	}
  	}
- 	Trends_create(); 	
+ 	Trends_create(0); 	
  	//发表评论
  	publish.onclick = function(){
+ 		var reg = /^\s*$/g;
+ 		if(!reg.test(Muitos_text.value)&&Muitos_text.value!==''){
  		content = Muitos_text.value;
- 		 Muitos_text.value = "";
+ 		Muitos_text.value = '';
  		criticism_json.unshift(content);
  		alert("评论成功!");
  		criticism_ul.innerHTML = '';
- 		Trends_create();
+ 		Trends_create(0);
+ 		}else{alert("评论内容不能为空!");}
+ 	}
+	//获取左右箭头
+ 	var prev = document.getElementsByClassName('prev');
+ 	var next = document.getElementsByClassName('next');
+ 	function jiantou(){
+ 		for(var y=0;y<span.length;y++){
+	 		if(span[y].className == 'bg'){
+	 			var nuber = parseInt(span[y].innerText);
+	 			
+	 		}
+	 	}
  	}
 }

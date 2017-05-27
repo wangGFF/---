@@ -1836,9 +1836,14 @@ p strong {
 }
 
 .page span {
-	color: #fff;
-	background: #488FCD;
+	color: #999;
 	border-radius: 2px;
+	cursor: pointer;
+}
+
+.page span.bg {
+	background: #488FCD;
+	color: #fff;
 }
 
 .page .prev,.news .page .next {
@@ -1958,7 +1963,7 @@ p strong {
 }
 
 .news .remark .btn {
-	background: url(../img/button.png) 0 -272px;
+	background-color: white;
 	width: 118px;
 	height: 36px;
 	display: block;
@@ -1993,11 +1998,6 @@ p strong {
 	width: 100%;
 	margin: 0 0 10px;
 }
-
-
-
-
-
 
 .news .sl {
 	overflow: hidden;
@@ -2044,12 +2044,6 @@ p strong {
 .news .sl .cycle-pager .cycle-pager-active {
 	color: #333;
 }
-
-
-
-
-
-
 
 .news .r dt {
 	height: 36px;
