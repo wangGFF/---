@@ -222,7 +222,7 @@
     margin-right:2px; 
 }
 .lunbotuRightChange{
-	animation:lunbotuRightChange 4s linear 0s 1 forwards;
+	animation:lunbotuRightChange 4s linear 0s forwards;
 }
 @-webkit-keyframes lunbotuRightChange{
 	0%{
