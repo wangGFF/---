@@ -82,6 +82,7 @@ ul{
 	padding-bottom:133px;
 }
 /*轮播*/
+	/*margin-left:-25px;*/
 .news .sl {
 	overflow: hidden;
 	clear: both;
@@ -127,7 +128,6 @@ ul{
 .news .sl .cycle-pager .cycle-pager-active {
 	color: #333;
 }
-
 
 /*学生志愿右部分*/
 .student_wish_right{
