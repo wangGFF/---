@@ -103,7 +103,6 @@
 	right:7.6%;
 	font-size:16px;
 	top:171px;
-
 	cursor: pointer;
 }
 .all_comment{
@@ -294,8 +293,7 @@
 		opacity: 1;
 		z-index:99;
 	}
-
-
+}
 
 
 .sub_div{
@@ -318,5 +316,4 @@
 	color: white;
 	text-align: center;
 	cursor: pointer;
-
 }

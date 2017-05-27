@@ -42,7 +42,6 @@ window.onload=function(){
         };
     })();
 
-
 //评论
     function $(id){
         return document.getElementById(id);
@@ -99,6 +98,3 @@ window.onload=function(){
     }
     
 }
-
-}
-
